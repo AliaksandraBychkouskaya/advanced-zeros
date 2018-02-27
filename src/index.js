@@ -16,7 +16,8 @@ function getZerosCount(number, base) {
       numberForChanges /= baseReal;
       count++;
     }
-    number -= 1;
+
+    number -= (numberForChanges === number ? 1 : baseReal);
   }
   while (number > 0);
 
